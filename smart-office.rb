@@ -14,11 +14,11 @@ Telegram::Bot::Client.run(token) do |bot|
       when '/stop'
         puts "stop"
         bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
-      when '/photo'
+      when '/pong'
         puts "photo request from #{message.from.first_name} #{message.from.last_name}"
         begin  
           open('photo.jpg', 'wb') do |file|
-            file << open('http://#{webcom_ip}/photo.jpg').read
+            file << open("http://#{webcom_ip}/photo.jpg").read
           end
           bot.api.send_photo(chat_id: message.chat.id, photo: File.new('photo.jpg'))
         rescue Exception => e  
