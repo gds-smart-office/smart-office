@@ -29,6 +29,7 @@ GEM
     persistent_httparty (0.1.2)
       httparty (~> 0.9)
       persistent_http (< 2)
+    rmagick (2.15.4)
     telegram-bot-ruby (0.3.10)
       httmultiparty
       persistent_httparty
@@ -44,6 +45,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rmagick
   telegram-bot-ruby
 
 BUNDLED WITH
